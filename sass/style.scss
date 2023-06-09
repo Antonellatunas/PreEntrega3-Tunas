@@ -1,0 +1,241 @@
+
+/*imports*/
+@import "reseteo";
+@import "footer";
+@import "header";
+@import "navegacion";
+@import "galery";
+@import "variables";
+@font-face {
+    font-family: neutraface text;
+    src: url(../assets/font/neutraface-text-cufonfonts/);
+}
+@font-face {
+    font-family:general sans;
+    src: url(../assets/font/GeneralSans_Complete/Fonts/OTF/);
+}
+/*body*/
+body{background-color:$colorbackg;
+    height: fit-content;
+    min-height: 100vh;
+}
+/*contenido index*/
+/*eventos de index*/
+.events{display:flex;
+    .event1, .event2, .event3{
+        display: inline-flex;
+        width: 30%;
+        margin:20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .event1 i,.event2 i,.event3 i{
+        color:$accent1;
+        font-size: 30px;
+        margin-right: 5px;
+    }
+    .date{
+        display: inline-flex;
+        flex-direction: column;
+        font:20px neutraface text;
+        text-transform: uppercase;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        span{
+            font-weight: 900;
+            font-size: 30px;
+        }
+    }
+    .noticia{
+        display: inline-flex;
+        flex-direction: column;
+        p{
+            font:$textfont;
+            color: $colorfont;
+            text-align: justify;
+        }
+        h2{
+            font:$tith2font;
+            color:$accent1;
+            text-align: left;
+        }
+    }
+
+}
+/*contenido episodios*/
+.episodios{display: flex;
+    .caps{
+        display: inline-flex;
+        width: 50%;
+        margin:20px;
+        justify-content: center;
+        align-items: center;
+        .capimg{
+            width: 260px;
+            height: 130px;
+            border: $borderimg;
+            border-radius:5px;
+            margin-right: 10px;
+            img{
+                width:250px;
+                height: 120px;
+                padding: 2px;
+            }
+        }
+    }
+    .capresu{
+        display: inline-block;
+        flex-direction: column;
+        height: 130px;
+        h2{
+            font:$tith2font;
+            color: $accent1;
+            text-align: left;
+        }
+        p{
+            font:$textfont;
+            color: $colorfont;
+            text-align: justify;
+            height: 100px;
+            padding: 0 5px;
+            overflow: scroll;
+        }
+    }
+}
+/*contenido Personajes*/
+.personajes{display: flex;
+    .pjs{
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+        margin: 20px;
+        flex-direction: column;
+        h2{
+            font:900 30px neutraface text;
+            color: $accent1;
+            text-align: center;
+        }
+        .pj-foto{
+            border: $borderimg;
+            border-radius: 5px;
+            width: 210px;
+            height: 210px;
+            img{
+                width: 200px;
+                height: 200px;
+                padding: 5px;
+                mix-blend-mode: multiply;
+                filter: brightness(50%) grayscale(100%);
+            }
+            :hover{
+                mix-blend-mode:none;
+                filter: none;
+            }
+        }
+        .conrad{background: $conradcolor;}
+        .conrad:hover{background:transparent;}
+        .jere{background: $jerecolor;}
+        .jere:hover{background:transparent;}
+        .belly{background: $bellycolor;}
+        .belly:hover{background:transparent;}
+        .suss{background: $m1color;}
+        .suss:hover{background:transparent;}
+        .steve{background: $stepcolor;}
+        .steve:hover{background:transparent;}
+        .lau{background: $m2color;}
+        .lau:hover{background:transparent;}
+        .pj-data{
+            display: flex;
+            flex-direction: column;
+            font:$textfont;
+            justify-content:space-between;
+            align-items: flex-start;
+            width:100%;
+            text-align: justify;
+            height: 210px;
+            ol{justify-content: space-between;
+                li{
+                    margin-left: 10px;
+                    justify-content: space-between;
+                    position: relative;
+                    margin-top: 10px;
+                    span{
+                        font-weight: 900;
+                        padding-right: 30px;
+                    }
+                    ::after {
+                        height: 2px;
+                        width: 100%;
+                        color: $accent1;
+                    }
+                }
+            }
+            p{
+                text-align: center;
+                font-size: 12px;
+                font-style: italic;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+/*contenido books*/
+.img-dato{
+    width: auto;
+    height: 150px;
+    border: $borderimg;
+    border-radius: 20px;
+}
+.details-datos{
+    margin: 20px;
+    border-bottom: 1px solid $accent2;
+}
+.data-book{
+    flex-direction: column;
+}
+.data-book h2, .dat-difere h2{
+    font: 900 25px neutraface text;
+    color: $accent1;
+}
+.data-book p,.dat-difere p{
+    font:$textfont;
+    padding:5px 20px;
+    text-align: justify;
+}
+.diferencias{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin:15px;}
+.dat-difere{
+    flex-direction: column;
+    margin: 20px;
+}
+/*responsive*/
+@media (max-width: 1100px){ .events {
+    flex-direction: column;
+}}
+@media (max-width: 1100px){ .events .event1, .events .event2, .events .event3 {
+    width: 90%;
+}}
+@media (max-width: 1100px){ .episodios {
+    flex-direction: column;
+}}
+@media (max-width: 1100px){ .episodios .caps {
+    width: 90%;
+}}
+@media (max-width: 1100px){ .personajes {
+    flex-direction: column;
+}}
+@media (max-width: 1100px){ .pjs {
+    width: 100%;
+}}
+@media (max-width: 1100px){ .diferencias {
+    flex-direction: column;
+}}
+@media (max-width: 390px){ .diferencias {
+    margin-top: 125px;
+}}

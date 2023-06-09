@@ -1,0 +1,25 @@
+/*navegacion*/
+.navegacion{
+    background-color:$accent2 !important;
+    font:900 20px neutraface text;
+    .nav-text{
+        background:$accent1;
+        padding: 15px;
+        margin: -10px 25px -10px -10px;
+        border-radius: 0px 50px 50px 0px;
+        color: $colorbackg;;
+    }
+    .nav-colorac {
+        color: $colorbackg!important;
+    }
+    .nav-linkho:hover{
+        background-color:$accent1 ;
+        transition: .4s all;
+        color: $colorbackg;
+        border-radius: 10px;
+    }
+}
+/*responsive*/
+@media (max-width: 1100px){ .navegacion{
+    font-size: 15px;
+}}

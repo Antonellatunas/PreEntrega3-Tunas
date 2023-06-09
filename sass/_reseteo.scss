@@ -1,0 +1,31 @@
+/* reseteo css*/
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    user-select: none;
+    scroll-behavior: smooth;
+    text-align: justify;
+}
+a{
+    text-decoration: none;
+}
+b{
+    text-decoration: underline;
+    color: $accent2;
+}
+i{
+    color:$accent2;
+}
+p{margin-bottom: 0px!important;}
+dl, ol, ul {
+    margin-bottom: 0!important;
+}
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-thumb {
+	width: 2px;
+	background: $accent1;
+}
